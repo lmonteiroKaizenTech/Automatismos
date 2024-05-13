@@ -1,0 +1,294 @@
+{
+  "config": {
+    "configFile": "c:\\Users\\LeandroMonteiro\\KAIZEN TECH, S.A\\KaizenTechFiles - Documentos\\Operações\\Suporte\\Automatismos\\Automatismos\\playwright.config.js",
+    "rootDir": "c:/Users/LeandroMonteiro/KAIZEN TECH, S.A/KaizenTechFiles - Documentos/Operações/Suporte/Automatismos/Automatismos/tests/scripts",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "c:/Users/LeandroMonteiro/KAIZEN TECH, S.A/KaizenTechFiles - Documentos/Operações/Suporte/Automatismos/Automatismos/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "setup",
+        "name": "setup",
+        "testDir": "c:/Users/LeandroMonteiro/KAIZEN TECH, S.A/KaizenTechFiles - Documentos/Operações/Suporte/Automatismos/Automatismos/tests/scripts",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 150000000
+      },
+      {
+        "outputDir": "c:/Users/LeandroMonteiro/KAIZEN TECH, S.A/KaizenTechFiles - Documentos/Operações/Suporte/Automatismos/Automatismos/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "c:/Users/LeandroMonteiro/KAIZEN TECH, S.A/KaizenTechFiles - Documentos/Operações/Suporte/Automatismos/Automatismos/tests/scripts",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 150000000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.41.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "CriarMenus.spec.ts",
+      "file": "CriarMenus.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "CriarMenus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 142794,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Leitura bem-sucedida sem OneDrive.\n"
+                    },
+                    {
+                      "text": "[\n  {\n    \u001b[32m'1'\u001b[39m: \u001b[32m'AQS_PD_Carregal'\u001b[39m,\n    \u001b[32m'2'\u001b[39m: \u001b[32m'AQS_PD_LandingPage_Montagem9'\u001b[39m,\n    \u001b[32m'3'\u001b[39m: \u001b[32m'Hubs'\u001b[39m,\n    \u001b[32m'4'\u001b[39m: \u001b[32m'Gestão de Energia'\u001b[39m,\n    \u001b[32m'5'\u001b[39m: \u001b[32m'Energy by Shift'\u001b[39m,\n    \u001b[32m'6'\u001b[39m: \u001b[32m'Spokes'\u001b[39m,\n    \u001b[32m'7'\u001b[39m: \u001b[32m'New'\u001b[39m,\n    \u001b[32m'8'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'9'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'10'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'11'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'12'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'13'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'14'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'15'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'16'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'17'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'18'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'19'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'20'\u001b[39m: \u001b[1mnull\u001b[22m,\n    Site: \u001b[32m'aqs'\u001b[39m,\n    Ambiente: \u001b[32m'AQS_PRD'\u001b[39m,\n    Cpag: \u001b[32m'PageDefinition_PD0000032414.pdef'\u001b[39m\n  },\n  {\n    \u001b[32m'1'\u001b[39m: \u001b[32m'AQS_PD_Carregal'\u001b[39m,\n    \u001b[32m'2'\u001b[39m: \u001b[32m'AQS_PD_LandingPage_Montagem9'\u001b[39m,\n    \u001b[32m'3'\u001b[39m: \u001b[32m'Hubs'\u001b[39m,\n    \u001b[32m'4'\u001b[39m: \u001b[32m'Gestão de Energia'\u001b[39m,\n    \u001b[32m'5'\u001b[39m: \u001b[32m'Energy by Shift'\u001b[39m,\n    \u001b[32m'6'\u001b[39m: \u001b[32m'Spokes'\u001b[39m,\n    \u001b[32m'7'\u001b[39m: \u001b[32m'New'\u001b[39m,\n    \u001b[32m'8'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'9'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'10'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'11'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'12'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'13'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'14'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'15'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'16'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'17'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'18'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'19'\u001b[39m: \u001b[1mnull\u001b[22m,\n    \u001b[32m'20'\u001b[39m: \u001b[1mnull\u001b[22m,\n    Site: \u001b[32m'aqs'\u001b[39m,\n    Ambiente: \u001b[32m'AQS_PRD'\u001b[39m,\n    Cpag: \u001b[32m'PageDefinition_PD0000032414.pdef'\u001b[39m\n  }\n]\n"
+                    },
+                    {
+                      "text": "[\n  \u001b[32m'PageDefinition_PD0000032414.pdef'\u001b[39m,\n  \u001b[32m'PageDefinition_PD0000032414.pdef'\u001b[39m\n]\n"
+                    },
+                    {
+                      "text": "\u001b[33m1\u001b[39m\n"
+                    },
+                    {
+                      "text": "Entrei\n"
+                    },
+                    {
+                      "text": "\u001b[33m1\u001b[39m\n"
+                    },
+                    {
+                      "text": "Entrei\n"
+                    },
+                    {
+                      "text": "Vetor: AQS_PD_Carregal,AQS_PD_LandingPage_Montagem9,Hubs,Gestão de Energia,Energy by Shift,Spokes,New,AQS_PD_Carregal,AQS_PD_LandingPage_Montagem9,Hubs,Gestão de Energia,Energy by Shift,Spokes,New\n"
+                    },
+                    {
+                      "text": "vetor: AQS_PD_Carregal\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "AQS_PD_Carregal\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Texto: AQS_PD_Carregal\n"
+                    },
+                    {
+                      "text": "vetor: AQS_PD_LandingPage_Montagem9\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "AQS_PD_LandingPage_Montagem9\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Texto: AQS_PD_LandingPage_Montagem9\n"
+                    },
+                    {
+                      "text": "vetor: Hubs\n"
+                    },
+                    {
+                      "text": "vetor: Gestão de Energia\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Gestão de Energia\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Texto: Gestão de Energia\n"
+                    },
+                    {
+                      "text": "vetor: Energy by Shift\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Energy by Shift\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Texto: Energy by Shift\n"
+                    },
+                    {
+                      "text": "vetor: Spokes\n"
+                    },
+                    {
+                      "text": "vetor: New\n"
+                    },
+                    {
+                      "text": "soma: 0\n"
+                    },
+                    {
+                      "text": "\u001b[33m1\u001b[39m\n"
+                    },
+                    {
+                      "text": "vetor: AQS_PD_Carregal\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "AQS_PD_Carregal\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Texto: AQS_PD_Carregal\n"
+                    },
+                    {
+                      "text": "vetor: AQS_PD_LandingPage_Montagem9\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "AQS_PD_LandingPage_Montagem9\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Texto: AQS_PD_LandingPage_Montagem9\n"
+                    },
+                    {
+                      "text": "vetor: Hubs\n"
+                    },
+                    {
+                      "text": "vetor: Gestão de Energia\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Gestão de Energia\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Texto: Gestão de Energia\n"
+                    },
+                    {
+                      "text": "vetor: Energy by Shift\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Energy by Shift\n"
+                    },
+                    {
+                      "text": "-------------------------------------------------------------\n"
+                    },
+                    {
+                      "text": "Texto: Energy by Shift\n"
+                    },
+                    {
+                      "text": "vetor: Spokes\n"
+                    },
+                    {
+                      "text": "vetor: New\n"
+                    },
+                    {
+                      "text": "soma: 0\n"
+                    },
+                    {
+                      "text": "\u001b[33m2\u001b[39m\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-05-09T11:12:51.571Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "de44787fc49be15c975e-c9f2a7ac03dfe4d0326f",
+          "file": "CriarMenus.spec.ts",
+          "line": 39,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-05-09T11:12:49.736Z",
+    "duration": 145993.97,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
