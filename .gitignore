@@ -3,7 +3,6 @@ node_modules/
 /playwright-report/
 /playwright/.cache/
 /summary.json
-/playwright/.auth
 /output.txt
 /tests/video/
 /tests/auth.setup.ts
