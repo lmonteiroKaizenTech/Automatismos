@@ -101,16 +101,23 @@ test('CriarMenus', async ({ page }) => {
     site = segundaLinha['Site'] as string;
 
     let cpag: any[] = [];
+    let NomeAtual: any[] = [];
+    let NovoNome: any[] = [];
+    let visibilidade: any[] = [];
 
     for (var i = 0; i < dadosExcel.length; i++)
     {
         const segundaLinha: LinhaExcel = dadosExcel[i] as LinhaExcel;
         cpag.push(segundaLinha['Cpag'] as string);
+        NomeAtual.push(segundaLinha['Nome Atual'] as string);
+        NovoNome.push(segundaLinha['Novo Nome'] as string);
+        visibilidade.push(segundaLinha['Visibilidade'] as string);
     }
+    console.log('Nome Atual: ' + NomeAtual);
+    console.log('Novo nome: ' + NovoNome);
+    console.log('Visibilidade: ' + visibilidade);
 
     console.log(cpag);
-
-    
 
     let vetor: string[][] = [];
     var linha = 0;
@@ -120,8 +127,6 @@ test('CriarMenus', async ({ page }) => {
         let ma: any[] = [];
         var i = 1;
         let proximo = 'começo';
-        console.log(i);
-        console.log('Entrei');
         while (proximo != null)
         {
             const segundaLinha: LinhaExcel = dadosExcel[linha] as LinhaExcel;
@@ -207,6 +212,7 @@ test('CriarMenus', async ({ page }) => {
         await page.click('.btn-item-key-btn_GerarKey');
         await page.waitForTimeout(3000);
         const key = await page.locator('#contentPage_ctl04').textContent();
+        const key_final = key?.trim();
 
         // ------------------------------Fim Gerar Key's------------------------------
 
@@ -293,6 +299,50 @@ test('CriarMenus', async ({ page }) => {
         await page.click('#contentPage_slice2_Create');
 
         await page.waitForTimeout(5000);
+
+        // ------------------------Parametrizar Página------------------------
+
+        if (NovoNome[j] && visibilidade[j] == null)
+        {
+            const elementos = await page.$$(`[title*="${key_final}"]`);
+            elementos[0].click();
+            await page.locator('.fa-edit').nth(1).click();
+            await page.waitForTimeout(3000);
+            await page.fill('#tseditName', NovoNome[j]);
+            await page.waitForTimeout(3000);
+            await page.click('#contentPage_Save_Button');
+            await page.waitForTimeout(3000);
+        }
+        else if (visibilidade[j] && NovoNome[j])
+        {
+            const elementos = await page.$$(`[title*="${key_final}"]`);
+            elementos[0].click();
+            await page.locator('.fa-edit').nth(1).click();
+            await page.waitForTimeout(3000);
+            await page.fill('#tseditName', NovoNome[j]);
+            await page.waitForTimeout(3000);
+            await page.click('a:text("Visibility")');
+            await page.waitForTimeout(3000);
+            await page.click('#tseditIsVisibleInNavigation');
+            await page.waitForTimeout(3000);
+            await page.click('#contentPage_Save_Button');
+        }
+        else if (visibilidade[j] && NovoNome[j] == null)
+        {
+            const elementos = await page.$$(`[title*="${key_final}"]`);
+            elementos[0].click();
+            await page.locator('.fa-edit').nth(1).click();
+            await page.waitForTimeout(3000);
+            await page.click('a:text("Visibility")');
+            await page.waitForTimeout(3000);
+            await page.click('#tseditIsVisibleInNavigation');
+            await page.waitForTimeout(3000);
+            await page.click('#contentPage_Save_Button');
+            await page.waitForTimeout(3000);
+        }
+
+        // ----------------------Fim Parametrizar Página----------------------
+
         linha++;
         console.log('-------------------------Linha do excel executada-------------------------');
         console.log(linha);
