@@ -306,6 +306,7 @@ test('CriarMenus', async ({ page }) => {
         {
             const elementos = await page.$$(`[title*="${key_final}"]`);
             elementos[0].click();
+            await page.waitForTimeout(3000);
             await page.locator('.fa-edit').nth(1).click();
             await page.waitForTimeout(3000);
             await page.fill('#tseditName', NovoNome[j]);
@@ -317,6 +318,7 @@ test('CriarMenus', async ({ page }) => {
         {
             const elementos = await page.$$(`[title*="${key_final}"]`);
             elementos[0].click();
+            await page.waitForTimeout(3000);
             await page.locator('.fa-edit').nth(1).click();
             await page.waitForTimeout(3000);
             await page.fill('#tseditName', NovoNome[j]);
@@ -331,6 +333,7 @@ test('CriarMenus', async ({ page }) => {
         {
             const elementos = await page.$$(`[title*="${key_final}"]`);
             elementos[0].click();
+            await page.waitForTimeout(3000);
             await page.locator('.fa-edit').nth(1).click();
             await page.waitForTimeout(3000);
             await page.click('a:text("Visibility")');
