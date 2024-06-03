@@ -65,6 +65,12 @@ test('CriarItemSuporte', async ({ page }) => {
     await page.waitForTimeout(3000);
     await page.selectOption('[id="Project_13b20ece-43ac-4be9-b233-ab0804ecd635_$DropDownChoice"]', 'KT.23.905.E01 - Automatização de testes - fase I');
     await page.waitForTimeout(3000);
+    await page.fill('[id="Respons_x00e1_vel_7e214bdc-6cac-4eb8-a55b-30481ded226d_$ClientPeoplePicker_EditorInput"]', 'Leandro Monteiro');
+    await page.waitForTimeout(2000);
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(2000);
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(2000);
     await page.fill('[id="Analysis_x0020_Person_01d8896a-218d-4303-982c-f2213057623e_$ClientPeoplePicker_EditorInput"]', 'Leandro Monteiro');
     await page.waitForTimeout(2000);
     await page.keyboard.press('Enter');
@@ -91,7 +97,7 @@ test('CriarItemSuporte', async ({ page }) => {
     await page.waitForTimeout(3000);
     await page.selectOption('[id="Category_6df9bd52-550e-4a30-bc31-a4366832a87d_$DropDownChoice"]', '(6) Tests');
     await page.waitForTimeout(3000);
-    await page.fill('[id="Comment_6df9bd52-550e-4a30-bc31-a4366832a87f_$TextField_inplacerte"]', 'Nova página de estornos.');
+    await page.fill('[id="Comment_6df9bd52-550e-4a30-bc31-a4366832a87f_$TextField_inplacerte"]', 'Testes automáticos página inventário.');
     await page.waitForTimeout(3000);
     await page.click('#ctl00_ctl30_g_0021adda_ba9e_4c0d_90a3_ccba980450b0_ctl00_toolBarTbl_RightRptControls_ctl00_ctl00_diidIOSaveItem');
     await page.waitForTimeout(3000);
