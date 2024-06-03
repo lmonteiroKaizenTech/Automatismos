@@ -65,6 +65,12 @@ test('CriarItemSuporte', async ({ page }) => {
     await page.waitForTimeout(3000);
     await page.selectOption('[id="Project_13b20ece-43ac-4be9-b233-ab0804ecd635_$DropDownChoice"]', 'SP.24.001 - Suporte Amorim');
     await page.waitForTimeout(3000);
+    await page.fill('[id="Respons_x00e1_vel_7e214bdc-6cac-4eb8-a55b-30481ded226d_$ClientPeoplePicker_EditorInput"]', 'tiago costa');
+    await page.waitForTimeout(2000);
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(2000);
+    await page.keyboard.press('Enter');
+    await page.waitForTimeout(2000);
     await page.fill('[id="Analysis_x0020_Person_01d8896a-218d-4303-982c-f2213057623e_$ClientPeoplePicker_EditorInput"]', 'tiago costa');
     await page.waitForTimeout(2000);
     await page.keyboard.press('Enter');
