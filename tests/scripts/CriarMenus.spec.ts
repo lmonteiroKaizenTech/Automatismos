@@ -101,7 +101,7 @@ test('CriarMenus', async ({ page }) => {
     site = segundaLinha['Site'] as string;
 
     let cpag: any[] = [];
-    let NomeAtual: any[] = [];
+    let key_vetor: any[] = [];
     let NovoNome: any[] = [];
     let visibilidade: any[] = [];
 
@@ -109,11 +109,11 @@ test('CriarMenus', async ({ page }) => {
     {
         const segundaLinha: LinhaExcel = dadosExcel[i] as LinhaExcel;
         cpag.push(segundaLinha['Cpag'] as string);
-        NomeAtual.push(segundaLinha['Nome Atual'] as string);
+        key_vetor.push(segundaLinha['Key'] as string);
         NovoNome.push(segundaLinha['Novo Nome'] as string);
         visibilidade.push(segundaLinha['Visibilidade'] as string);
     }
-    console.log('Nome Atual: ' + NomeAtual);
+    console.log('Key: ' + key_vetor);
     console.log('Novo nome: ' + NovoNome);
     console.log('Visibilidade: ' + visibilidade);
 
@@ -196,25 +196,30 @@ test('CriarMenus', async ({ page }) => {
     
     for (var j = 0; j < dadosExcel.length; j++)
     {
-        // ------------------------------Gerar Key's------------------------------
+        let key, key_final;
 
-        await page.goto('http://ktmesapp01/TS/pages/root/dev/osi_teste/pd0000002170/');
-        const currentURL = page.url();
-        if (currentURL.includes('http://ktmesapp01/TS/Account/LogOn.aspx?'))
+        if (key_vetor[j] == null)
         {
-            await page.getByLabel('Login').fill('kt0032'); //utilizador kt
-            await page.getByLabel('Password').click();
-            await page.getByLabel('Password').fill('12345'); //password
-            await page.getByRole('button', { name: 'Sign In' }).click();
+            // ------------------------------Gerar Key's------------------------------
+
+            await page.goto('http://ktmesapp01/TS/pages/root/dev/osi_teste/pd0000002170/');
+            const currentURL = page.url();
+            if (currentURL.includes('http://ktmesapp01/TS/Account/LogOn.aspx?'))
+            {
+                await page.getByLabel('Login').fill('kt0032'); //utilizador kt
+                await page.getByLabel('Password').click();
+                await page.getByLabel('Password').fill('12345'); //password
+                await page.getByRole('button', { name: 'Sign In' }).click();
+            }
+
+            await page.click('#contentPage_ctl32');
+            await page.click('.btn-item-key-btn_GerarKey');
+            await page.waitForTimeout(3000);
+            key = await page.locator('#contentPage_ctl04').textContent();
+            key_final = key?.trim();
+
+            // ------------------------------Fim Gerar Key's------------------------------
         }
-
-        await page.click('#contentPage_ctl32');
-        await page.click('.btn-item-key-btn_GerarKey');
-        await page.waitForTimeout(3000);
-        const key = await page.locator('#contentPage_ctl04').textContent();
-        const key_final = key?.trim();
-
-        // ------------------------------Fim Gerar Key's------------------------------
 
         //let vetor_primeiro: any[] = [];
         var soma = 0;
@@ -293,7 +298,8 @@ test('CriarMenus', async ({ page }) => {
         }
         await page.waitForTimeout(3000);
 
-        if (key) await page.fill('#contentPage_slice2_KeyTextBox', key);
+        if (key_vetor[j] != null) await page.fill('#contentPage_slice2_KeyTextBox', key_vetor[j]);
+        else if (key) await page.fill('#contentPage_slice2_KeyTextBox', key);
 
         await page.waitForTimeout(3000);
         await page.click('#contentPage_slice2_Create');
@@ -304,8 +310,16 @@ test('CriarMenus', async ({ page }) => {
 
         if (NovoNome[j] && visibilidade[j] == null)
         {
-            const elementos = await page.$$(`[title*="${key_final}"]`);
-            elementos[0].click();
+            if (key_vetor[j] == null)
+            {
+                const elementos = await page.$$(`[title*="${key_final}"]`);
+                elementos[0].click();
+            }
+            else
+            {
+                const elementos = await page.$$(`[title*="${key_vetor[j]}"]`);
+                elementos[0].click();
+            }
             await page.waitForTimeout(3000);
             await page.locator('.fa-edit').nth(1).click();
             await page.waitForTimeout(3000);
@@ -316,8 +330,16 @@ test('CriarMenus', async ({ page }) => {
         }
         else if (visibilidade[j] && NovoNome[j])
         {
-            const elementos = await page.$$(`[title*="${key_final}"]`);
-            elementos[0].click();
+            if (key_vetor[j] == null)
+            {
+                const elementos = await page.$$(`[title*="${key_final}"]`);
+                elementos[0].click();
+            }
+            else
+            {
+                const elementos = await page.$$(`[title*="${key_vetor[j]}"]`);
+                elementos[0].click();
+            }
             await page.waitForTimeout(3000);
             await page.locator('.fa-edit').nth(1).click();
             await page.waitForTimeout(3000);
@@ -331,8 +353,17 @@ test('CriarMenus', async ({ page }) => {
         }
         else if (visibilidade[j] && NovoNome[j] == null)
         {
-            const elementos = await page.$$(`[title*="${key_final}"]`);
-            elementos[0].click();
+            if (key_vetor[j] == null)
+            {
+                const elementos = await page.$$(`[title*="${key_final}"]`);
+                elementos[0].click();
+            }
+            else
+            {
+                const elementos = await page.$$(`[title*="${key_vetor[j]}"]`);
+                elementos[0].click();
+            }
+            
             await page.waitForTimeout(3000);
             await page.locator('.fa-edit').nth(1).click();
             await page.waitForTimeout(3000);
