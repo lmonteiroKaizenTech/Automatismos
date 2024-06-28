@@ -59,7 +59,7 @@ test('CriarItemSuporte', async ({ page }) => {
     const currentDate = new Date();
     const semana = getWeekNumber(currentDate); 
 
-    await page.fill('[id="Title_fa564e0f-0c70-4ab9-b863-0177e6ddd247_$TextField"]', 'Testes regressivos automáticos');
+    await page.fill('[id="Title_fa564e0f-0c70-4ab9-b863-0177e6ddd247_$TextField"]', 'Criação de 2 testes automáticos com a nova estrutura.');
     await page.waitForTimeout(3000);
     await page.selectOption('[id="Dossier_18e3039a-bbaa-4edf-a552-fcaf57d64898_$LookupField"]', '(60) Suporte');
     await page.waitForTimeout(3000);
@@ -97,7 +97,7 @@ test('CriarItemSuporte', async ({ page }) => {
     await page.waitForTimeout(3000);
     await page.selectOption('[id="Category_6df9bd52-550e-4a30-bc31-a4366832a87d_$DropDownChoice"]', '(6) Tests');
     await page.waitForTimeout(3000);
-    await page.fill('[id="Comment_6df9bd52-550e-4a30-bc31-a4366832a87f_$TextField_inplacerte"]', 'Testes automáticos página inventário.');
+    await page.fill('[id="Comment_6df9bd52-550e-4a30-bc31-a4366832a87f_$TextField_inplacerte"]', 'Criação de 2 testes automáticos com a nova estrutura.');
     await page.waitForTimeout(3000);
     await page.click('#ctl00_ctl30_g_0021adda_ba9e_4c0d_90a3_ccba980450b0_ctl00_toolBarTbl_RightRptControls_ctl00_ctl00_diidIOSaveItem');
     await page.waitForTimeout(3000);
