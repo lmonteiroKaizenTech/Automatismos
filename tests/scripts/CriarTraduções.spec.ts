@@ -114,17 +114,17 @@ test('CriarTraduções', async ({ page }) => {
     // ---------------Login Site Principal---------------
     // TrakSys12
 
-    await page.goto('http://ktmesapp01/TS');
+    await page.goto('http://172.16.1.17/TS');
     await page.getByLabel('Login').fill('kt0032'); //utilizador kt
     await page.getByLabel('Password').click();
-    await page.getByLabel('Password').fill('Lof25912'); // password
+    await page.getByLabel('Password').fill('1234'); // password
     await page.getByRole('button', { name: 'Sign In' }).click();
 
     var linha = 0;
 
     for (var i = 0; i < dadosExcel.length; i++)
     {
-        await page.goto('http://ktmesapp01/TS/pages/root/config/resx/?S1ID=176&S2Key=List.ResourceGroup.Items&S2ParentID=176&S3Key=Item.ResourceGroup&S3ID=176&s1=11020');
+        await page.goto('http://172.16.1.17/TS/pages/fsl/config/resx/?S1ID=168&S2Key=List.ResourceGroup.Items&S2ParentID=168&S3Key=Item.ResourceGroup&S3ID=168&s1=11020');
         await page.waitForTimeout(3000);
         await page.locator('a:text("  New")').nth(1).click();
         await page.fill('#tseditKey', key[i]);
