@@ -7,23 +7,23 @@ test('CriarItemSuporte', async ({ page }) => {
 
     await page.goto('https://login.microsoftonline.com/b9203dbb-355b-4a6e-9ab3-b40f57429a4f/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code%20id_token&resource=00000003-0000-0ff1-ce00-000000000000&scope=openid&nonce=1A55C185A111A1B33E54CE141C818B87DA3FE0357864369A-FA4DFBA29CBE5E67FA15E4BE3235F5097820AC8A15FF643E426A67ECD8019884&redirect_uri=https%3A%2F%2Fkaizentechsa%2Esharepoint%2Ecom%2F_forms%2Fdefault%2Easpx&state=OD0w&claims=%7B"id_token"%3A%7B"xms_cc"%3A%7B"values"%3A%5B"CP1"%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&client-request-id=be9220a1-001f-8000-af7b-8a8c535dc2f7');
     await page.waitForTimeout(3000);
-    const currentURL = page.url();
-    if (currentURL.includes('https://login.microsoftonline.com/b9203dbb-355b-4a6e-9ab3-b40f57429a4f/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code%20id_token&resource=00000003-0000-0ff1-ce00-000000000000&scope=openid&nonce=1A55C185A111A1B33E54CE141C818B87DA3FE0357864369A-FA4DFBA29CBE5E67FA15E4BE3235F5097820AC8A15FF643E426A67ECD8019884&redirect_uri=https%3A%2F%2Fkaizentechsa%2Esharepoint%2Ecom%2F_forms%2Fdefault%2Easpx&state=OD0w&claims=%7B"id_token"%3A%7B"xms_cc"'))
-    {
+    // const currentURL = page.url();
+    // if (currentURL.includes('https://login.microsoftonline.com/b9203dbb-355b-4a6e-9ab3-b40f57429a4f/oauth2/authorize?client%5Fid=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&response%5Fmode=form%5Fpost&response%5Ftype=code%20id%5Ftoken&resource=00000003%2D0000%2D0ff1%2Dce00%2D000000000000&scope=openid&nonce=EB8B2CD99ABC5D8851E81FA7126EF7BC366ADEA158DE1200%2DA0FCDA5195ECCD2A83F2B5F23A3A5DF7CD128C1F1436EBF6E1EC15D07465AB80&redirect%5Furi=https%3A%2F%2Fkaizentechsa%2Esharepoint%2Ecom%2F%5Fforms%2Fdefault%2Easpx&state=OD0w&claims=%7B%22id%5Ftoken%22%3A%7B%22xms%5Fcc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083%2D87e0%2D41b5%2Dbb78%2D0bc43c8a8e8a&client%2Drequest%2Did=d40c3fa1%2D30da%2D9000%2D6d44%2Daf9f0e1fa72a'))
+    // {
         await page.fill('#i0116', 'lmonteiro@kaizen.tech');
         await page.click('#idSIButton9');
-        await page.fill('#i0118', 'Lof25912'); 
+        await page.fill('#i0118', 'Lof25912');
         await page.click('#idSIButton9');
         await page.click('#idBtn_Back');
         await page.waitForTimeout(5000);
-    }
-    else if (currentURL.includes('https://login.microsoftonline.com/b9203dbb-355b-4a6e-9ab3-b40f57429a4f/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code%20id_token&resource=00000003-0000-0ff1-ce00-000000000000&scope=openid&nonce=1A55C185A111A1B33E54CE141C818B87DA3FE0357864369A-FA4DFBA29CBE5E67FA15E4BE3235F5097820AC8A15FF643E426A67ECD8019884&redirect_uri=https%3A%2F%2Fkaizentechsa%2Esharepoint%2Ecom%2F_forms%2Fdefault%2Easpx&state=OD0w&claims=%7B%22id_token%22%3A%7B%22xms'))
-    {
-        const tile = await page.locator('.tile-container').first();
-        tile.click();
-        await page.fill('#i0118','Lof25912');
-        await page.click('#idSIButton9');
-    }
+    // }
+    // else if (currentURL.includes('https://login.microsoftonline.com/b9203dbb-355b-4a6e-9ab3-b40f57429a4f/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code%20id_token&resource=00000003-0000-0ff1-ce00-000000000000&scope=openid&nonce=1A55C185A111A1B33E54CE141C818B87DA3FE0357864369A-FA4DFBA29CBE5E67FA15E4BE3235F5097820AC8A15FF643E426A67ECD8019884&redirect_uri=https%3A%2F%2Fkaizentechsa%2Esharepoint%2Ecom%2F_forms%2Fdefault%2Easpx&state=OD0w&claims=%7B%22id_token%22%3A%7B%22xms'))
+    // {
+    //     const tile = await page.locator('.tile-container').first();
+    //     tile.click();
+    //     await page.fill('#i0118','Lof25912');
+    //     await page.click('#idSIButton9');
+    // }
 
     await page.goto('https://kaizentechsa.sharepoint.com/sites/oper/s1/Lists/Changes%20Follow%20Up/Items%20Ativos1.aspx');
     await page.waitForTimeout(3000);
