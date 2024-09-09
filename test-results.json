@@ -67,14 +67,14 @@
   },
   "suites": [
     {
-      "title": "tarefasversao.spec.ts",
-      "file": "tarefasversao.spec.ts",
+      "title": "CriarItemSuporte.spec.ts",
+      "file": "CriarItemSuporte.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Versões",
-          "ok": true,
+          "title": "CriarItemSuporte",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -86,26 +86,46 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 3848365,
-                  "errors": [],
-                  "stdout": [
+                  "status": "failed",
+                  "duration": 51867,
+                  "error": {
+                    "message": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+                    "stack": "Error: page.waitForTimeout: Target page, context or browser has been closed\n    at c:\\Users\\LeandroMonteiro\\Desktop\\GitHub\\Automatismos\\tests\\scripts\\CriarItemSuporte.spec.ts:68:16",
+                    "location": {
+                      "file": "c:\\Users\\LeandroMonteiro\\Desktop\\GitHub\\Automatismos\\tests\\scripts\\CriarItemSuporte.spec.ts",
+                      "column": 16,
+                      "line": 68
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 67 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mselectOption(\u001b[32m'[id=\"Project_13b20ece-43ac-4be9-b233-ab0804ecd635_$DropDownChoice\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'SP.24.001 - Suporte Amorim'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 69 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'[id=\"Respons_x00e1_vel_7e214bdc-6cac-4eb8-a55b-30481ded226d_$ClientPeoplePicker_EditorInput\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Sara Silva'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 70 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 71 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "text": "[\n  \u001b[32m'Criação de Tabela tCpagUsage'\u001b[39m,\n  \u001b[32m'Atualização Scripts Logics, DMS, DLL'\u001b[39m,\n  \u001b[32m'Atualizacao Script Logic KPI2ITEMKPISCRIPT'\u001b[39m,\n  \u001b[32m'Criação do EventDefinitionType Microparagem'\u001b[39m,\n  \u001b[32m'PR.23.810 - ACF - Alteração de envio de tempos para ERP'\u001b[39m,\n  \u001b[32m'Criação de nova SP stp_KT_ConsumosProducoesArea'\u001b[39m,\n  \u001b[32m'Criação de pagedefinition em todos os sites  CPag0000000405_CPag_Listagem_ProdCons'\u001b[39m,\n  \u001b[32m'Configuração do Item #KTISSUE#17523# - Executar STP'\u001b[39m,\n  \u001b[32m'Registo de Artigo lote em Silos de CEs'\u001b[39m,\n  \u001b[32m'DLL Release 3.4'\u001b[39m\n]\n"
+                      "location": {
+                        "file": "c:\\Users\\LeandroMonteiro\\Desktop\\GitHub\\Automatismos\\tests\\scripts\\CriarItemSuporte.spec.ts",
+                        "column": 16,
+                        "line": 68
+                      },
+                      "message": "Error: page.waitForTimeout: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 67 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mselectOption(\u001b[32m'[id=\"Project_13b20ece-43ac-4be9-b233-ab0804ecd635_$DropDownChoice\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'SP.24.001 - Suporte Amorim'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 69 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'[id=\"Respons_x00e1_vel_7e214bdc-6cac-4eb8-a55b-30481ded226d_$ClientPeoplePicker_EditorInput\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Sara Silva'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 70 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 71 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at c:\\Users\\LeandroMonteiro\\Desktop\\GitHub\\Automatismos\\tests\\scripts\\CriarItemSuporte.spec.ts:68:16\u001b[22m"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-09T09:56:07.381Z",
-                  "attachments": []
+                  "startTime": "2024-09-09T13:28:45.772Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "c:\\Users\\LeandroMonteiro\\Desktop\\GitHub\\Automatismos\\tests\\scripts\\CriarItemSuporte.spec.ts",
+                    "column": 16,
+                    "line": 68
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "3a0aab3a8cf8886806af-d8f2246f76f7871ededb",
-          "file": "tarefasversao.spec.ts",
-          "line": 5,
+          "id": "287e64d3d058e8054c6e-0814bf9515d87a67cad5",
+          "file": "CriarItemSuporte.spec.ts",
+          "line": 6,
           "column": 5
         }
       ]
@@ -113,11 +133,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-09-09T09:56:06.927Z",
-    "duration": 3849878.707,
-    "expected": 1,
+    "startTime": "2024-09-09T13:28:45.317Z",
+    "duration": 53479.793999999994,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
