@@ -23,27 +23,27 @@ test('Versões', async ({ page }) => {
     await page.locator('cf-action-wrapper button').click();
 
     for (var i = 0; i < 20; i++)
-        {
-            await page.waitForTimeout(15000);
-            await page.keyboard.press('a');
-            await page.getByPlaceholder('Escreva para filtrar').type('teste');
-            await page.keyboard.press('Enter');
-            await page.locator('.field-C_x00f3_digo_x0020_Distribui_x00-htmlGrid_1').nth(-2).click({ force: true });
-            await page.waitForTimeout(3000);
-            await page.keyboard.press('a');
-            await page.getByPlaceholder('Escreva para filtrar').type('teste');
-            await page.keyboard.press('Enter');
-            await page.waitForTimeout(3000);
-            await page.locator('.field-Respons_x00e1_vel-htmlGrid_1').nth(-2).click({ force: true });
-            await page.waitForTimeout(3000);
-            await page.keyboard.press('a');
-            await page.waitForTimeout(2000);
-            await page.fill('.ms-BasePicker-input', 'Joana');
-            await page.waitForTimeout(2000);
-            await page.keyboard.press('Enter');
-            await page.waitForTimeout(1000);
-            await page.click(`#NewRowPlaceholderID`);
-        }
+    {
+        await page.waitForTimeout(15000);
+        await page.keyboard.press('a');
+        await page.getByPlaceholder('Escreva para filtrar').type('teste');
+        await page.keyboard.press('Enter');
+        await page.locator('.field-C_x00f3_digo_x0020_Distribui_x00-htmlGrid_1').nth(-2).click({ force: true });
+        await page.waitForTimeout(3000);
+        await page.keyboard.press('a');
+        await page.getByPlaceholder('Escreva para filtrar').type('teste');
+        await page.keyboard.press('Enter');
+        await page.waitForTimeout(3000);
+        await page.locator('.field-Respons_x00e1_vel-htmlGrid_1').nth(-2).click({ force: true });
+        await page.waitForTimeout(3000);
+        await page.keyboard.press('a');
+        await page.waitForTimeout(2000);
+        await page.fill('.ms-BasePicker-input', 'Joana');
+        await page.waitForTimeout(2000);
+        await page.keyboard.press('Enter');
+        await page.waitForTimeout(1000);
+        await page.click(`#NewRowPlaceholderID`);
+    }
 
     // await page.goto('https://kaizentechsa.sharepoint.com/sites/oper/s1/Lists/Tarefas%20de%20Verso/AllItems.aspx');
     // await page.waitForTimeout(2000);

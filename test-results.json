@@ -87,16 +87,16 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 470792,
+                  "duration": 3848365,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "[\n  \u001b[32m'Criação de Tabela tCpagUsage'\u001b[39m,\n  \u001b[32m'Atualização Scripts Logics, DMS, DLL'\u001b[39m,\n  \u001b[32m'Atualizacao Script Logic KPI2ITEMKPISCRIPT'\u001b[39m,\n  \u001b[32m'Criação do EventDefinitionType Microparagem'\u001b[39m,\n  \u001b[32m'PR.23.810 - ACF - Alteração de envio de tempos para ERP'\u001b[39m,\n  \u001b[32m'Criação de nova SP stp_KT_ConsumosProducoesArea'\u001b[39m,\n  \u001b[32m'Criação de pagedefinition em todos os sites  CPag0000000405_CPag_Listagem_ProdCons'\u001b[39m,\n  \u001b[32m'Configuração do Item #KTISSUE#17523# - Executar STP'\u001b[39m,\n  \u001b[32m'Registo de Artigo lote em Silos de CEs'\u001b[39m\n]\n"
+                      "text": "[\n  \u001b[32m'Criação de Tabela tCpagUsage'\u001b[39m,\n  \u001b[32m'Atualização Scripts Logics, DMS, DLL'\u001b[39m,\n  \u001b[32m'Atualizacao Script Logic KPI2ITEMKPISCRIPT'\u001b[39m,\n  \u001b[32m'Criação do EventDefinitionType Microparagem'\u001b[39m,\n  \u001b[32m'PR.23.810 - ACF - Alteração de envio de tempos para ERP'\u001b[39m,\n  \u001b[32m'Criação de nova SP stp_KT_ConsumosProducoesArea'\u001b[39m,\n  \u001b[32m'Criação de pagedefinition em todos os sites  CPag0000000405_CPag_Listagem_ProdCons'\u001b[39m,\n  \u001b[32m'Configuração do Item #KTISSUE#17523# - Executar STP'\u001b[39m,\n  \u001b[32m'Registo de Artigo lote em Silos de CEs'\u001b[39m,\n  \u001b[32m'DLL Release 3.4'\u001b[39m\n]\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-06T14:34:55.448Z",
+                  "startTime": "2024-09-09T09:56:07.381Z",
                   "attachments": []
                 }
               ],
@@ -113,8 +113,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-09-06T14:34:55.020Z",
-    "duration": 472585.765,
+    "startTime": "2024-09-09T09:56:06.927Z",
+    "duration": 3849878.707,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
