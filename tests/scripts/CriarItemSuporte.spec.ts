@@ -57,9 +57,10 @@ test('CriarItemSuporte', async ({ page }) => {
         return 1 + Math.ceil((firstThursday - tempDate.valueOf()) / 604800000); // 604800000 = number of milliseconds in a week
     }
     const currentDate = new Date();
-    const semana = getWeekNumber(currentDate); 
+    const semana = getWeekNumber(currentDate);
+    const mes = currentDate.getMonth() + 1;
 
-    await page.fill('[id="Title_fa564e0f-0c70-4ab9-b863-0177e6ddd247_$TextField"]', 'Registo Tempo Suporte 04_2024 - Semana ' + semana);
+    await page.fill('[id="Title_fa564e0f-0c70-4ab9-b863-0177e6ddd247_$TextField"]', 'Registo Tempo Suporte 0' + mes + '_2024 - Semana ' + semana);
     await page.waitForTimeout(3000);
     await page.selectOption('[id="Dossier_18e3039a-bbaa-4edf-a552-fcaf57d64898_$LookupField"]', '(60) Suporte');
     await page.waitForTimeout(3000);
