@@ -67,14 +67,14 @@
   },
   "suites": [
     {
-      "title": "CriarItemSuporte.spec.ts",
-      "file": "CriarItemSuporte.spec.ts",
+      "title": "DuplicarItem.spec.ts",
+      "file": "DuplicarItem.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "CriarItemSuporte",
-          "ok": false,
+          "title": "DuplicarItem",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -86,45 +86,28 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "failed",
-                  "duration": 51867,
-                  "error": {
-                    "message": "Error: page.waitForTimeout: Target page, context or browser has been closed",
-                    "stack": "Error: page.waitForTimeout: Target page, context or browser has been closed\n    at c:\\Users\\LeandroMonteiro\\Desktop\\GitHub\\Automatismos\\tests\\scripts\\CriarItemSuporte.spec.ts:68:16",
-                    "location": {
-                      "file": "c:\\Users\\LeandroMonteiro\\Desktop\\GitHub\\Automatismos\\tests\\scripts\\CriarItemSuporte.spec.ts",
-                      "column": 16,
-                      "line": 68
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 67 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mselectOption(\u001b[32m'[id=\"Project_13b20ece-43ac-4be9-b233-ab0804ecd635_$DropDownChoice\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'SP.24.001 - Suporte Amorim'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 69 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'[id=\"Respons_x00e1_vel_7e214bdc-6cac-4eb8-a55b-30481ded226d_$ClientPeoplePicker_EditorInput\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Sara Silva'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 70 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 71 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
+                  "status": "passed",
+                  "duration": 64274,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "location": {
-                        "file": "c:\\Users\\LeandroMonteiro\\Desktop\\GitHub\\Automatismos\\tests\\scripts\\CriarItemSuporte.spec.ts",
-                        "column": 16,
-                        "line": 68
-                      },
-                      "message": "Error: page.waitForTimeout: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 67 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mselectOption(\u001b[32m'[id=\"Project_13b20ece-43ac-4be9-b233-ab0804ecd635_$DropDownChoice\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'SP.24.001 - Suporte Amorim'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 68 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 69 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'[id=\"Respons_x00e1_vel_7e214bdc-6cac-4eb8-a55b-30481ded226d_$ClientPeoplePicker_EditorInput\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Sara Silva'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 70 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 71 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at c:\\Users\\LeandroMonteiro\\Desktop\\GitHub\\Automatismos\\tests\\scripts\\CriarItemSuporte.spec.ts:68:16\u001b[22m"
+                      "text": "23/09/2024\n"
+                    },
+                    {
+                      "text": "04/10/2024\n"
                     }
                   ],
-                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-09-09T13:28:45.772Z",
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "c:\\Users\\LeandroMonteiro\\Desktop\\GitHub\\Automatismos\\tests\\scripts\\CriarItemSuporte.spec.ts",
-                    "column": 16,
-                    "line": 68
-                  }
+                  "startTime": "2024-09-19T14:50:13.202Z",
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "287e64d3d058e8054c6e-0814bf9515d87a67cad5",
-          "file": "CriarItemSuporte.spec.ts",
+          "id": "848d721323da6da34532-ad6ab58f7e12a6ae5563",
+          "file": "DuplicarItem.spec.ts",
           "line": 6,
           "column": 5
         }
@@ -133,11 +116,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-09-09T13:28:45.317Z",
-    "duration": 53479.793999999994,
-    "expected": 0,
+    "startTime": "2024-09-19T14:50:12.347Z",
+    "duration": 66278.194,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

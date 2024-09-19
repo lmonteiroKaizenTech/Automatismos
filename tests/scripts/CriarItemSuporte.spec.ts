@@ -98,7 +98,7 @@ test('CriarItemSuporte', async ({ page }) => {
     await page.waitForTimeout(3000);
     await page.selectOption('[id="Category_6df9bd52-550e-4a30-bc31-a4366832a87d_$DropDownChoice"]', '(4) Task');
     await page.waitForTimeout(3000);
-    await page.fill('[id="Comment_6df9bd52-550e-4a30-bc31-a4366832a87f_$TextField_inplacerte"]', 'Registo Tempo Suporte 04_2024 - Semana ' + semana);
+    await page.fill('[id="Comment_6df9bd52-550e-4a30-bc31-a4366832a87f_$TextField_inplacerte"]', 'Registo Tempo Suporte 0' + mes + '_2024 - Semana ' + semana);
     await page.waitForTimeout(3000);
     await page.click('#ctl00_ctl30_g_0021adda_ba9e_4c0d_90a3_ccba980450b0_ctl00_toolBarTbl_RightRptControls_ctl00_ctl00_diidIOSaveItem');
     await page.waitForTimeout(3000);
