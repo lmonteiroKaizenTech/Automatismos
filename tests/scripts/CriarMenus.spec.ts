@@ -7,8 +7,8 @@ const { exec } = require('child_process');
 const sql = require('mssql');
 const config = require('../../../AUTOMATISMOS/tests/dbConnection/connection.js');
 
-let ambientes_nome: any[] = ['AC_PRD','AC_QLD','AC_TST','AFL_PRD','AFL_QLD','AFL_TST','ACF_PRD','ACF_QLD','ACF_TST','ACC_PRD','ACC_QLD','ACC_TST','DEV','AQS_PRD','AQS_TST','ARC_PRD','ARC_TST','ACO_PRD','ACO_TST','CLP_PRD','CLP_TST','DISNEYLAND', 'MCS_PRD','MCS_TST','FSL_PRD'];
-let ambientes_links: any[] = ['AMR-MES15','AMRMMES89','ktmesapp04','AMR-MES16','AMRMMES88','KTMESAPP03','AMRMMES28','AMRMMES87','KTMESAPP05','AMRMMES30','AMRMMES84','ktmesapp02','ktmesapp01','62.28.206.115','172.16.1.15','172.16.3.1','172.16.1.9','172.16.4.2','172.16.1.13','10.60.101.20','ktmesapp07','ktdisneyland01','10.10.10.2','172.16.1.10','172.16.6.2'];
+let ambientes_nome: any[] = ['AC_PRD','AC_QLD','AC_TST','AFL_PRD','AFL_QLD','AFL_TST','ACF_PRD','ACF_QLD','ACF_TST','ACC_PRD','ACC_QLD','ACC_TST','DEV','AQS_PRD','AQS_TST','ARC_PRD','ARC_TST','ACO_PRD','ACO_TST','CLP_PRD','CLP_TST','DISNEYLAND', 'MCS_PRD','MCS_TST','FSL_PRD','IMT_PRD'];
+let ambientes_links: any[] = ['AMR-MES15','AMRMMES89','ktmesapp04','AMR-MES16','AMRMMES88','KTMESAPP03','AMRMMES28','AMRMMES87','KTMESAPP05','AMRMMES30','AMRMMES84','ktmesapp02','ktmesapp01','62.28.206.115','172.16.1.15','172.16.3.1','172.16.1.9','172.16.4.2','172.16.1.13','10.60.101.20','ktmesapp07','ktdisneyland01','10.10.10.2','172.16.1.10','62.28.206.113', 'ktmesapp08'];
 
 let output, user = '';
 // Executar um comando PowerShell e capturar a saída
@@ -169,24 +169,24 @@ test('CriarMenus', async ({ page }) => {
         const currentURL = page.url();
         if (currentURL == 'https://' + ambiente_final +'/TS/Account/LogOn.aspx?ts_deny=true&ts_rurl=%2fTS%2fdefault.aspx')
         {
-            await page.getByLabel('Login').fill('kt0032'); //utilizador kt
+            await page.getByLabel('Login').fill('kt0019'); //utilizador kt
             await page.getByLabel('Password').click();
-            await page.getByLabel('Password').fill('Lof25912'); // password
+            await page.getByLabel('Password').fill('5#&z(,N3'); // password
             await page.getByRole('button', { name: 'Sign In' }).click();
 
         }
     }
     else
     {
-        await page.goto('http://' + ambiente_final + '/TS/');
+        await page.goto('https://' + ambiente_final + '/TS/');
         await page.waitForTimeout(3000);
         //Verificação de Login
         const currentURL = page.url();
-        if (currentURL == 'http://' + ambiente_final +'/TS/Account/LogOn.aspx?ts_deny=true&ts_rurl=%2fTS%2fdefault.aspx')
+        if (currentURL == 'https://' + ambiente_final +'/TS/Account/LogOn.aspx?ts_deny=true&ts_rurl=%2fTS%2fdefault.aspx')
         {
-            await page.getByLabel('Login').fill('kt0032'); //utilizador kt
+            await page.getByLabel('Login').fill('kt0019'); //utilizador kt
             await page.getByLabel('Password').click();
-            await page.getByLabel('Password').fill('12345'); // password
+            await page.getByLabel('Password').fill('5#&z(,N3'); // password
             await page.getByRole('button', { name: 'Sign In' }).click();
     
         }
@@ -208,11 +208,11 @@ test('CriarMenus', async ({ page }) => {
             {
                 await page.getByLabel('Login').fill('kt0032'); //utilizador kt
                 await page.getByLabel('Password').click();
-                await page.getByLabel('Password').fill('12345'); //password
+                await page.getByLabel('Password').fill('Lof25912'); //password
                 await page.getByRole('button', { name: 'Sign In' }).click();
             }
 
-            await page.click('#contentPage_ctl32');
+            await page.click('#contentPage_ctl33');
             await page.click('.btn-item-key-btn_GerarKey');
             await page.waitForTimeout(3000);
             key = await page.locator('#contentPage_ctl04').textContent();
@@ -226,11 +226,12 @@ test('CriarMenus', async ({ page }) => {
 
         await page.waitForTimeout(5000);
         if (ambiente == 'AQS_PRD') await page.goto('https://' + ambiente_final + '/TS/pages/' + site + '/dev/pagedef/');
-        else await page.goto('http://' + ambiente_final + '/TS/pages/' + site + '/dev/pagedef/');
+        else await page.goto('https://' + ambiente_final + '/TS/pages/' + site + '/dev/pagedef/');
         await page.waitForTimeout(3000);
         for (var i = 0; i < vetor[j].length; i++)
         {
             console.log('vetor: ' + vetor[j][i]);
+            await page.waitForTimeout(3000);
             if (vetor[j][i].includes('Hub'))  await page.click(`a:text("${vetor[j][i]}")`);
             if (vetor[j][i].includes('Spokes'))
             {
@@ -247,7 +248,7 @@ test('CriarMenus', async ({ page }) => {
                 {
                     const texto = await elementos[k].textContent();
                     if (texto == 'Hubs' || texto == 'Spokes') soma++;
-                    await page.waitForTimeout(3000);
+                    await page.waitForTimeout(2000);
                     const texto_final = texto?.trim();
                     console.log('-------------------------------------------------------------');
                     console.log(texto_final);

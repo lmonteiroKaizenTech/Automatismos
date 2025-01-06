@@ -124,7 +124,11 @@ test('CriarTraduções', async ({ page }) => {
 
     for (var i = 0; i < dadosExcel.length; i++)
     {
-        await page.goto('http://ktmesapp01/TS/pages/root/config/resx/?S1ID=176&S2Key=List.ResourceGroup.Items&S2ParentID=176&S3Key=Item.ResourceGroup&S3ID=176&s1=11020');
+       // await page.goto('http://ktmesapp01/TS/pages/root/config/resx/?S1ID=168&S2Key=List.ResourceGroup.Items&S2ParentID=168&S3Key=Item.ResourceGroup&S3ID=168&s1=11020');
+       // await page.goto('http://172.16.6.2/TS/pages/fsl/config/resx/?S1ID=168&S2Key=List.ResourceGroup.Items&S2ParentID=168&S3Key=Item.ResourceGroup&S3ID=168&s1=11020');
+       // await page.goto('http://ktmesapp11/TS/pages/aqs/config/resx/?S1ID=161&S2Key=List.ResourceGroup.Items&S2ParentID=161&S3Key=Item.ResourceGroup&S3ID=161&s1=11020');
+       // await page.goto('https://62.28.206.115/TS/pages/aqs/config/resx/?S1ID=161&S2Key=List.ResourceGroup.Items&S2ParentID=161&S3Key=Item.ResourceGroup&S3ID=161&s1=11020');
+
         await page.waitForTimeout(3000);
         await page.locator('a:text("  New")').nth(1).click();
         await page.fill('#tseditKey', key[i]);
